@@ -6,12 +6,11 @@ metadata:
   namespace: default
   annotations:
     fluxcd.io/automated: "true"
-    filter.fluxcd.io/chart-image: glob:dev-*
 spec:
   releaseName: helm-flux-terraria
   chart:
     git: git@github.com:ammilam/terraria-world-1
-    path: terraria/
+    path: /
     name: terraria
     ref: master
   values:
