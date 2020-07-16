@@ -43,15 +43,15 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
+          args:
+            - "-world"
+            - "/terraria/world/world1.wld"
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           tty: {{ .Values.terraria.tty }}
           stdin: {{ .Values.terraria.stdin }}
-          args:
-            - "-world"
-            - "/terraria/world/worlds_World_1.wld"
           ports:
             - name: server
               containerPort: 7777
