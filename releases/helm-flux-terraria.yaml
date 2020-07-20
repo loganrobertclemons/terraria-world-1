@@ -18,12 +18,12 @@ spec:
     image:
       repository: ryshe/terraria
       tag: vanilla-1.4.0.5
-    replicaCount: 3
+    replicaCount: 1
     hpa:
       enabled: false
 imagePullSecrets: []
-nameOverride: "terraria-world-1-testing-flux"
-fullnameOverride: "terraria-world-1-testing-flux"
+nameOverride: "terraria-world-1"
+fullnameOverride: "terraria-world-1"
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
