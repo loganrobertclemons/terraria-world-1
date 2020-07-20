@@ -10,7 +10,7 @@ spec:
   releaseName: terraria-world-1
   chart:
     git: git@github.com:ammilam/terraria-world-1
-    path: /
+    path: /terraria
     name: terraria
     ref: master
   values:
