@@ -21,8 +21,8 @@ spec:
     hpa:
       enabled: false
 imagePullSecrets: []
-nameOverride: "terraria-world-1"
-fullnameOverride: "terraria-world-1"
+nameOverride: "terraria-world-1-testing-flux"
+fullnameOverride: "terraria-world-1-testing-flux"
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
