@@ -4,8 +4,8 @@ kind: HelmRelease
 metadata:
   name: terraria-world-1
   namespace: default
- # annotations:
-#  fluxcd.io/automated: "true"
+  annotations:
+    fluxcd.io/automated: "true"
 spec:
   releaseName: terraria-world-1
   chart:
