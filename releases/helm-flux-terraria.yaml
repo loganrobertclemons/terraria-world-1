@@ -18,7 +18,7 @@ spec:
     image:
       repository: ryshe/terraria
       tag: vanilla-1.4.0.5
-    replicaCount: 1
+    replicaCount: 3
     hpa:
       enabled: false
 imagePullSecrets: []
