@@ -4,25 +4,25 @@ kind: HelmRelease
 metadata:
   name: terraria-world-1
   namespace: default
-  annotations:
-    fluxcd.io/automated: "true"
+ # annotations:
+#  fluxcd.io/automated: "true"
 spec:
   releaseName: terraria-world-1
   chart:
-    git: git@github.com:ammilam/terraria-world-1
-    path: /terraria
+    repository: https://github.com/ammilam/terraria-world-1
     name: terraria
+    version: 0.4.0
     ref: master
   values:
     image:
       repository: ryshe/terraria
-      tag: vanilla-1.4.0.5
+      tag: latest
     replicaCount: 1
     hpa:
       enabled: false
 imagePullSecrets: []
-nameOverride: "terraria-world-1"
-fullnameOverride: "terraria-world-1"
+nameOverride: "terraria-world-1-testing-flux"
+fullnameOverride: "terraria-world-1-testing-flux"
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
