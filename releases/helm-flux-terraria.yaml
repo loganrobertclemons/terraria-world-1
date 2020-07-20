@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: ryshe/terraria
-      tag: vanilla-1.4.0.5
+      tag: latest
     replicaCount: 1
     hpa:
       enabled: false
