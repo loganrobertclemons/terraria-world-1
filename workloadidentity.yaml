@@ -6,4 +6,4 @@ metadata:
   name: flux
   namespace: flux
   annotations:
-    flux-gcp@southern-scene-271919.iam.gserviceaccount.com 
+   serviceAccount: flux-gcp@southern-scene-271919.iam.gserviceaccount.com 
