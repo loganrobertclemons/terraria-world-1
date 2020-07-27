@@ -4,7 +4,7 @@ Expand the name of the chart.
 */}}
 {{- define "terraria.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
-{{- end -}}
+{{- end }}
 
 {{/*
 Create a default fully qualified app name.
@@ -20,16 +20,16 @@ If release name contains chart name it will be used as a full name.
 {{- .Release.Name | trunc 63 | trimSuffix "-" -}}
 {{- else -}}
 {{- printf "%s-%s" .Release.Name $name | trunc 63 | trimSuffix "-" -}}
-{{- end -}}
-{{- end -}}
-{{- end -}}
+{{- end }}
+{{- end }}
+{{- end }}
 
 {{/*
 Create chart name and version as used by the chart label.
 */}}
 {{- define "terraria.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
-{{- end -}}
+{{- end }}
 
 {{/*
      Return the number representing the world size string
@@ -41,8 +41,8 @@ Create chart name and version as used by the chart label.
 {{- printf "2" }}
 {{- else if contains "small" .Values.terraria.worldsize }}
 {{- printf "1" }}
-{{- end -}}
-{{- end -}}
+{{- end }}
+{{- end }}
 
 {{/*
 Common labels
@@ -55,7 +55,7 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
-{{- end -}}
+{{- end }}
 
 {{/*
 Create the name of the service account to use
@@ -65,5 +65,5 @@ Create the name of the service account to use
     {{ default (include "terraria.fullname" .) .Values.serviceAccount.name }}
 {{- else -}}
     {{ default "default" .Values.serviceAccount.name }}
-{{- end -}}
-{{- end -}}
+{{- end }}
+{{- end }}
