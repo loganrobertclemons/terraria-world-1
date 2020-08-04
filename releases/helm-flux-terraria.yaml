@@ -42,7 +42,7 @@ terraria:
   tty: false
   stdin: false
   service:
-    type: ClusterIp
+    type: LoadBalancer
     port: 7777
     annotations: {}
   #worldsize: medium
