@@ -28,8 +28,8 @@ ENV CONFIGPATH /root/.local/share/Terraria/Worlds
 ENV LOGPATH /tshock/logs
 
 # Allow for external data
-VOLUME ["/root/.local/share/BuildersWorkshop_3Journey.wld", "/tshock/logs"]
-COPY ./worlds_World_1.wld /root/.local/share/Terraria/Worlds/
+VOLUME ["/root/.local/share/Terraria/Worlds", "/tshock/logs"]
+COPY ./BuildersWorkshop_3Journey.wld /root/.local/share/Terraria/Worlds/
 ENV -world /root/.local/share/Terraria/Worlds/BuildersWorkshop_3Journey.wld
 ENV WORLD_FILENAME "BuildersWorkshop_3Journey.wld"
 
