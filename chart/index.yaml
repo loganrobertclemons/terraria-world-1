@@ -3,7 +3,7 @@ entries:
   terraria:
   - apiVersion: v1
     appVersion: latest
-    created: "2020-07-27T17:41:00.517882-05:00"
+    created: "2020-08-06T13:19:12.955432357-05:00"
     description: Terraria is a 2D sandbox game with gameplay that revolves around
       exploration, building, combat, and mining.
     digest: 0dff4ba2d569df73d3bbbe77493cfac32e3b02710dd3c19dc2254d1bb310cb12
@@ -13,6 +13,6 @@ entries:
       name: Andrew Milam
     name: terraria
     urls:
-    - https://github.com/ammilam/terraria-world-1/terraria-0.4.0.tgz
+    - terraria-0.4.0.tgz
     version: 0.4.0
-generated: "2020-07-27T17:41:00.516106-05:00"
+generated: "2020-08-06T13:19:12.953429734-05:00"
