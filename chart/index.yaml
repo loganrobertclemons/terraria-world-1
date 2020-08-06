@@ -3,7 +3,7 @@ entries:
   terraria:
   - apiVersion: v1
     appVersion: latest
-    created: "2020-08-06T12:53:55.4840719-05:00"
+    created: "2020-08-06T13:19:12.955432357-05:00"
     description: Terraria is a 2D sandbox game with gameplay that revolves around
       exploration, building, combat, and mining.
     digest: 0dff4ba2d569df73d3bbbe77493cfac32e3b02710dd3c19dc2254d1bb310cb12
@@ -15,4 +15,4 @@ entries:
     urls:
     - terraria-0.4.0.tgz
     version: 0.4.0
-generated: "2020-08-06T12:53:55.482279766-05:00"
+generated: "2020-08-06T13:19:12.953429734-05:00"
