@@ -13,12 +13,10 @@ spec:
     ref: master
   vaules:
     replicaCount: 3
-
     image:
       repository: ryshe/terraria
       tag: latest
       pullPolicy: Always
-
     imagePullSecrets: []
     nameOverride: "terraria-world-1"
     fullnameOverride: "terraria-world-1"
@@ -193,7 +191,7 @@ spec:
     affinity: {}
 
     persistence:
-      enabled: false
+      enabled: true
       ## If defined, storageClassName: <storageClass>
       ## If set to "-", storageClassName: "", which disables dynamic provisioning
       ## If undefined (the default) or set to null, no storageClassName spec is
