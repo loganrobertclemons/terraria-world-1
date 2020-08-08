@@ -7,11 +7,10 @@ metadata:
   annotations:
     fluxcd.io/automated: "true"
 spec:
-  releaseName: terraria-world-1
+  releaseName: terraria
   chart:
-    repository: https://raw.githubusercontent.com/ammilam/terraria-world-1
+    repository: git@github.com:ammilam/terraria-world-1
     path: chart
-    name: terraria
     version: 0.4.0
     ref: master
   values:
