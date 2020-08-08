@@ -10,7 +10,7 @@ spec:
   releaseName: terraria-world-1
   chart:
     repository: https://github.com/ammilam/terraria-world-1.git
-    path: chart/
+   # path: chart
     name: terraria
     version: 0.4.0
     ref: master
