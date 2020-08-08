@@ -10,8 +10,8 @@ image:
   pullPolicy: Always
 
 imagePullSecrets: []
-nameOverride: "terraria-world-1"
-fullnameOverride: "terraria-world-1"
+nameOverride: "terraria-world-test-for-elise"
+fullnameOverride: "terraria-world-test-for-elise"
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
