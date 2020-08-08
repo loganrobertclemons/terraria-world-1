@@ -1,0 +1,1 @@
+helm repo index . --url https://ammilam.github.io/terraria-world-1/

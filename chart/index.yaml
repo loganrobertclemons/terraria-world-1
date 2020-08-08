@@ -1,18 +1,32 @@
 apiVersion: v1
 entries:
   terraria:
-  - apiVersion: v1
+  - apiVersion: v3
     appVersion: latest
-    created: "2020-08-06T13:19:12.955432357-05:00"
+    created: "2020-08-08T18:19:57.84817-05:00"
     description: Terraria is a 2D sandbox game with gameplay that revolves around
       exploration, building, combat, and mining.
-    digest: 0dff4ba2d569df73d3bbbe77493cfac32e3b02710dd3c19dc2254d1bb310cb12
+    digest: ab220ab6f7d72079a9eb873e9fb560857fd3e6b0102d0f322f98132f9a9922c7
     icon: https://gamepedia.cursecdn.com/terraria_gamepedia/c/c4/Terraria.png
     maintainers:
     - email: andrewmichaelmilam@gmail.com
       name: Andrew Milam
     name: terraria
     urls:
-    - terraria-0.4.0.tgz
+    - https://ammilam.github.io/terraria-world-1/terraria-1.tgz
+    version: "1"
+  - apiVersion: v3
+    appVersion: latest
+    created: "2020-08-08T18:19:57.842041-05:00"
+    description: Terraria is a 2D sandbox game with gameplay that revolves around
+      exploration, building, combat, and mining.
+    digest: 435e5c84f687cbdaab2b05858a1f0f15a3685f699d4b4ac2d7c1e964a92a0eaf
+    icon: https://gamepedia.cursecdn.com/terraria_gamepedia/c/c4/Terraria.png
+    maintainers:
+    - email: andrewmichaelmilam@gmail.com
+      name: Andrew Milam
+    name: terraria
+    urls:
+    - https://ammilam.github.io/terraria-world-1/terraria-0.4.0.tgz
     version: 0.4.0
-generated: "2020-08-06T13:19:12.953429734-05:00"
+generated: "2020-08-08T18:19:57.839224-05:00"
