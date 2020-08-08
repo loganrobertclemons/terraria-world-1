@@ -11,6 +11,7 @@ spec:
     git: git@github.com:ammilam/terraria-world-1
     path: chart
     ref: master
+    version: 1
   vaules:
     replicaCount: 1
     image:
