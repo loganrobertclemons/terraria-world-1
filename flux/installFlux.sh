@@ -5,7 +5,7 @@
 ##
 
 if [ "$#" -ne 1 ]; then
-  echo "Usage: ./installFlux den3sbx"
+  echo "Usage: ./installFlux andrew"
   exit 1
 fi
 
