@@ -13,7 +13,7 @@ spec:
     ref: master
     version: 1
   vaules:
-    replicaCount: 1
+    replicaCount: 3
     image:
       repository: ryshe/terraria
       tag: latest
