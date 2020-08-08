@@ -12,7 +12,7 @@ spec:
     path: chart
     ref: master
   vaules:
-    replicaCount: 3
+    replicaCount: 1
 
     image:
       repository: ryshe/terraria
@@ -200,7 +200,7 @@ spec:
       ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
       ##   GKE, AWS & OpenStack)
       ##
-      storageClassName: ""
+      storageClassName: "terraria-world-1"
       accessModes:
         - ReadWriteOnce
       size: 1Gi
