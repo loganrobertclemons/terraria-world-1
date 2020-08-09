@@ -15,5 +15,5 @@ ENVIRONMENT=$1
 # Helm install flux
 helm upgrade --install flux \
 fluxcd/flux --version 1.3.0 \
--f values/flux-${ENVIRONMENT}.yaml \
+-f ./flux-${ENVIRONMENT}.yaml \
 -n flux
