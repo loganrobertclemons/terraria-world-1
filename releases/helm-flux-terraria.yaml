@@ -11,7 +11,6 @@ spec:
     git: git@github.com:ammilam/terraria-world-1
     path: chart
     ref: master
-    version: 1
   valuesFrom:
   - chartFileRef:
       path: ../chart/values.yaml
