@@ -44,7 +44,7 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           args:
-            - "-autocreate world1.wld"
+            - "-autocreate"
             - "/terraria/world/world1.wld"
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
