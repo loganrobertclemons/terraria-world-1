@@ -33,7 +33,6 @@ terraria:
     type: LoadBalancer
     port: 7777
     annotations: {}
-    
   #worldsize: medium
   # 0 normal, 1 expert (UNUSED)
   #difficulty: 3
