@@ -8,7 +8,7 @@ metadata:
 spec:
   releaseName: terraria
   chart:
-    git: git@github.com:ammilam/terraria-world-1
+    git: git@github.com:loganrobertclemons/terraria-world-1
     path: chart
     ref: master
   valuesFrom:
