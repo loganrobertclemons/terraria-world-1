@@ -18,6 +18,7 @@ kind: DaemonSet
 apiVersion: extensions/v1beta1
 metadata:
   name: startup-script
+  namespace: kube-system
   labels:
     app: startup-script
 spec:
@@ -29,29 +30,19 @@ spec:
       hostPID: true
       containers:
         - name: startup-script
-          image: gcr.io/$DEVSHELL_PROJECT_ID/startup-script:v1
-          imagePullPolicy: Always
+          image: gcr.io/google-containers/startup-script:v1
           securityContext:
             privileged: true
           env:
           - name: STARTUP_SCRIPT
             value: |
               #! /bin/bash
-                set -o errexit
-                set -o pipefail
-                set -o nounset
-                #this copies down the world file from the project specific world storage bucket
-                sudo apt-get update -y
-                sudp apt install wget
-                sudo mkdir /tmp/world
-                touch test.txt
-                sudo wget https://storage.cloud.google.com/$DEVSHELL_PROJECT_ID-$REGION-$NAME/$WORLD /tmp/world/
-EOF
 
-mv startup-script.yaml ./gke-startup-script/
-cd gke-startup-script
-gcloud builds submit --tag gcr.io/$DEVSHELL_PROJECT_ID/startup-script:v1
-cd ..
+              set -o errexit
+              set -o pipefail
+              set -o nounset
+              wget gs://$DEVSHELL_PROJECT_ID-$REGION-$NAME/$WORLD /tmp/world
+EOF
 
 gsutil mb -b on gs://$DEVSHELL_PROJECT_ID-$REGION-$NAME
 gsutil cp ./$WORLD gs://$DEVSHELL_PROJECT_ID-$REGION-$NAME/$WORLD
@@ -59,7 +50,8 @@ gsutil iam ch allUsers:objectViewer gs://$DEVSHELL_PROJECT_ID-$REGION-$NAME
 
 #creates the k8s cluster in the sepcified region/zone and applies the startup-script daemonset
 gcloud beta container --project $DEVSHELL_PROJECT_ID clusters create $NAME-$REGION --zone $ZONE  --image-type "UBUNTU" --scopes "https://www.googleapis.com/auth/cloud-platform" --metadata disable-legacy-endpoints=true
-kubectl apply -f ./gke-startup-script/startup-script.yaml
+kubectl apply -f startup-script.yaml
+rm startup-script.yaml
 
 #creates the flux namespace and generates an ssh key
 kubectl create namespace flux
@@ -84,6 +76,3 @@ rm git-key-deploy.sh
 cd flux
 ./installFlux.sh andrew
 ./installHelmOperator.sh
-
-#last bit of cleanup
-rm ../gke-startup-script/startup-script.yaml
