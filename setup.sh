@@ -74,5 +74,5 @@ rm git-key-deploy.sh
 
 #installs flux and helm operator that will kick off and manage the terraria server deployment
 cd flux
-./installFlux.sh andrew
+./installFlux.sh
 ./installHelmOperator.sh
